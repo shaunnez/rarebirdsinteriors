@@ -1,0 +1,15 @@
+.content {
+  img {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 60%;
+      margin-right: 32px;
+      margin-bottom: 0px;
+    }
+  }
+}

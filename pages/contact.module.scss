@@ -1,0 +1,101 @@
+.content {
+  .hero {
+    width: 100%;
+    min-height: 800px;
+    overflow: hidden;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 32px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 16px;
+    padding: 0;
+    max-width: 650px;
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  .errorBox {
+    border: 1px solid var(--black);
+    border-radius: 2px;
+    padding: 8px;
+    text-align: center;
+    color: var(--black);
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .mapouter {
+    position: relative;
+    text-align: right;
+    height: 100;
+    width: 100;
+  }
+
+  .gmapCanvas {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 650px;
+    height: 800px;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    iframe {
+      position: relative;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    form {
+      width: 100%;
+      margin-left: 0;
+      order: 0;
+      margin-bottom: 32px;
+      max-width: 100%;
+    }
+    .gmapCanvas {
+      width: 100%;
+      order: 1;
+      max-width: 100%;
+    }
+  }
+}

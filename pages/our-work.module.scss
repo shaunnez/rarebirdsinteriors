@@ -1,0 +1,17 @@
+.grid {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 369px;
+  margin: 0px -16px 32px -16px;
+  > a {
+    flex-grow: 1;
+    gap: 1rem;
+    margin: 0px 16px !important;
+
+    > span {
+      width: 100% !important;
+    }
+  }
+}

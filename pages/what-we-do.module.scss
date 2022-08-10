@@ -1,0 +1,49 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  img {
+    width: 100%;
+    margin-top: 32px;
+    object-fit: cover;
+  }
+  @media screen and (min-width: 1024px) {
+    flex-wrap: nowrap;
+    img {
+      width: 50%;
+      margin-top: 0;
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    img {
+      width: 60%;
+      margin-top: 0;
+    }
+  }
+  > div {
+    margin-right: 64px;
+  }
+}
+
+.content {
+  div {
+    order: 1;
+  }
+  img {
+    order: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content {
+    div {
+      order: 0;
+    }
+    img {
+      order: 1;
+    }
+  }
+}

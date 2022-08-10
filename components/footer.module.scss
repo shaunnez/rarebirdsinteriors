@@ -1,0 +1,42 @@
+.footer {
+  margin-top: 64px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.55);
+
+  .footerContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    a + a {
+      margin-top: 64px;
+    }
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-top: 64px;
+    justify-content: center;
+    a {
+      margin-right: 16px;
+      color: "#434b44";
+      + a {
+        margin-right: 0;
+      }
+
+      svg {
+        transition: all 0.25s ease-in-out;
+      }
+
+      &:hover,
+      &:focus {
+        svg {
+          color: #000;
+        }
+      }
+    }
+  }
+}

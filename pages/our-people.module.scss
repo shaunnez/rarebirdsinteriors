@@ -1,0 +1,7 @@
+.gridWrapper {
+  @media screen and (min-width: 1024px) {
+    > div > a {
+      width: 20%;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.header {
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0vw;
+  right: 0vw;
+  position: fixed;
+  z-index: 2;
+  background: var(--white);
+  padding: 1.5vw;
+  padding: 1.5vw;
+  margin: 0 auto;
+  max-width: 2400px;
+}
+
+.flexSpacer {
+  flex-grow: 1;
+}
+
+.logo {
+  z-index: 2;
+  width: auto;
+  display: block;
+  position: relative;
+  height: 45px;
+  width: 148px;
+  display: flex;
+
+  @media screen and (min-width: 1024px) {
+    height: 60px;
+    width: 198px;
+  }
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.menu {
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+  }
+
+  div {
+    margin-left: 55px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.splashMenu {
+  visibility: hidden;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+  z-index: 1;
+  background: var(--white);
+  &.open {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+  }
+  a {
+    font-size: 36px;
+    font-weight: 400;
+    display: block;
+    padding: 16px 0px;
+  }
+}
+
+.closeLink {
+  display: none;
+  @media screen and (max-width: 1023px) {
+    position: absolute;
+    top: 32px;
+    right: 16px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.mobileMenu {
+  display: none;
+  @media screen and (max-width: 1023px) {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 22px;
+    right: 16px;
+    z-index: 2;
+  }
+}
